@@ -1,0 +1,63 @@
+# Query: 
+# ContextLines: 1
+
+file with 55 additions and 0 deletions.
+ 55 changes: 55 additions & 0 deletions55  
+PRODIGY_WD_01.html
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Navigation Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+nav li a:hover {
+  background-color: #555;
+}
+ const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
